@@ -24,9 +24,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (tasks.length > 0) {
-      localStorage.setItem("todoTasks", JSON.stringify(tasks));
-    }
+    localStorage.setItem("todoTasks", JSON.stringify(tasks));
   }, [tasks]);
 
   const handleAddTask = (title: string) => {
